@@ -49,6 +49,21 @@
                     if ( have_posts() ) :
                       while ( have_posts() ) : the_post();
                   ?>
+                    <?php
+                      $categories = get_the_category();
+                      $comma      = ', ';
+                      $output     = '';
+                      $japanese = 0;
+
+                      if ( $categories ) {
+                        foreach ( $categories as $category ) {
+                          if($category->cat_name == "Japanese") {
+                            $japanese = 1;
+                          }
+                        }
+                      }
+
+                    ?>
                     <!-- col -->
                     <div class="col-lg-12">
 
@@ -57,24 +72,13 @@
                         <!-- title frame -->
                         <div class="art-title-frame">
                           <!-- title -->
-                          <h4><?php the_title()?></h4>
+                          <h3 class="<?php if($japanese) echo "japanese-font-medium" ?>"><?php the_title()?></h3>
                         </div>
                         <!-- title frame end -->
                         <!-- right frame -->
                         <div class="art-right-frame">
-                          <div class="art-project-category">
-                            <?php
-                              $categories = get_the_category();
-                              $comma      = '　｜　';
-                              $output     = '';
-
-                              if ( $categories ) {
-                                foreach ( $categories as $category ) {
-                                  $output .= '<a href="' . get_category_link( $category->term_id ) . '">' . $category->cat_name . '</a>' . $comma;
-                                }
-                                echo trim( $output, $comma );
-                              }
-                            ?>
+                          <div class="art-project-category japanese-font">
+                           <?php the_time( 'Y年n月j日' ); ?>
                           </div>
                         </div>
                         <!-- right frame end -->
@@ -89,8 +93,21 @@
 
                       <!-- project cover -->
                       <div class="art-a art-project-cover">
+                        <div class="post-category-cover">
+                          <?php
+                            if ( $categories ) {
+                              foreach ( $categories as $category ) {
+                                if($category->cat_name != "Japanese") {
+                                  $output .= '<a href="' . get_category_link( $category->term_id ) . '">' . $category->cat_name . '</a>' . $comma;
+                                }
+                              }
+                              echo trim( $output, $comma );
+                            }
+                          ?>
+
+                        </div>
                         <!-- item frame -->
-                        <a data-fancybox="gallery" href="img/blog/2.jpg" class="art-portfolio-item-frame art-horizontal">
+                        <a class="art-portfolio-item-frame art-horizontal">
                           <!-- img -->
                           <?php
                             if (has_post_thumbnail()){
@@ -100,8 +117,6 @@
                               echo '<img src="'. get_template_directory_uri().'/assets/img/blog/2.jpg" alt="item">';
                             }
                           ?>
-                          <!-- zoom icon -->
-                          <span class="art-item-hover"><i class="fas fa-expand"></i></span>
                         </a>
                         <!-- item end -->
                       </div>
@@ -111,55 +126,24 @@
                     <!-- col end -->
 
                     <!-- col -->
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
 
                       <!-- post text -->
-                      <div class="art-a art-card post-content">
-                        <?php
-                          $getPost = get_the_content();
-                          $postwithbreaks = wpautop( $getPost, true );
-                          echo $postwithbreaks;
-                        ?>
+                      <div class="art-a art-card post-content<?php if($japanese) echo " japanese-font" ?>">
+                        <?php the_content()?>
+                        <div class="tag-box">
+                          <?php
+                            $posttags = get_the_tags();
+                            if ($posttags) {
+                              foreach($posttags as $tag) : ?>
+                                <span><a href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>" title="<?php echo esc_attr( $tag->name ); ?>"><?php echo esc_html( $tag->name ); ?></a></span>
+                              <?php
+                              endforeach;
+                            }
+                          ?>
+                        </div>
                       </div>
                       <!-- post text end -->
-
-                    </div>
-                    <!-- col end -->
-
-                    <!-- col -->
-                    <div class="col-lg-4">
-
-                      <div class="art-a art-card">
-                        <!-- table -->
-                        <div class="art-table p-15-15">
-                          <ul>
-                            <li>
-                              <h6>Date:</h6><span><?php the_time( 'Y.m.d' ); ?></span>
-                            </li>
-                            <li>
-                              <h6>Author:</h6><span><?php echo get_the_author_meta('display_name', $author_id); ?></span>
-                            </li>
-                            <li>
-                              <h6>Category:</h6>
-                              <span>
-                                <?php
-                                  $categories = get_the_category();
-                                  $comma      = '　｜　';
-                                  $output     = '';
-
-                                  if ( $categories ) {
-                                    foreach ( $categories as $category ) {
-                                      $output .= '<a href="' . get_category_link( $category->term_id ) . '">' . $category->cat_name . '</a>' . $comma;
-                                    }
-                                    echo trim( $output, $comma );
-                                  }
-                                ?>
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- table end -->
-                      </div>
 
                     </div>
                     <!-- col end -->
@@ -279,10 +263,6 @@
                                 <a href="<?php the_permalink() ?>">
                                   <h5 class="mb-15"><?php the_title() ?></h5>
                                 </a>
-                                <!-- text -->
-                                <div class="mb-15">
-                                  <?php the_excerpt() ?>
-                                </div>
                                 <!-- link -->
                                 <a href="<?php the_permalink() ?>" class="art-link art-color-link art-w-chevron">Read more</a>
                               </div>
@@ -385,5 +365,4 @@
 
     </div>
     <!-- app wrapper end -->
-
 <?php get_footer() ?>

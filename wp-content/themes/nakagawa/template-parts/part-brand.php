@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
 <!-- row -->
-<div class="row">
+<div class="row p-30-0">
 
   <!-- col -->
   <div class="col-6 col-lg-3">

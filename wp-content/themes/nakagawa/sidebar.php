@@ -20,7 +20,7 @@
       <!-- avatar -->
       <div class="art-avatar">
         <a href="<?php echo home_url('/')?>" class="art-avatar-curtain">
-          <img src="<?php echo get_template_directory_uri()?>/assets/img/face-1.png" alt="avatar">
+          <img src="<?php echo get_template_directory_uri()?>/assets/img/face-1.jpg" alt="avatar">
         </a>
         <!-- available -->
         <div class="art-lamp-light">
@@ -32,7 +32,7 @@
       <!-- name -->
       <h5 class="art-name mb-10"><a href="<?php echo home_url('/')?>">Junki Nakagawa</a></h5>
       <!-- post -->
-      <div class="art-sm-text">Software Developer</div>
+      <div class="art-sm-text">Web Developer</div>
     </div>
     <!-- info bar header end -->
 
@@ -50,11 +50,7 @@
           <!-- city -->
           <li>
             <h6>City:</h6><span>Tokyo</span>
-          </li>
-          <!-- age -->
-          <li>
-            <h6>Age:</h6><span>26</span>
-          </li>
+          </li
         </ul>
       </div>
       <!-- info bar about end -->
@@ -117,7 +113,7 @@
         <div class="art-hard-skills-item">
           <div class="art-skill-heading">
             <!-- title -->
-            <h6>Python</h6>
+            <h6>React / Next.js / Redux</h6>
           </div>
           <!-- progressbar frame -->
           <div class="art-line-progress">
@@ -132,7 +128,7 @@
         <div class="art-hard-skills-item">
           <div class="art-skill-heading">
             <!-- title -->
-            <h6>Solidity</h6>
+            <h6>Vue.js / Nuxt.js</h6>
           </div>
           <!-- progressbar frame -->
           <div class="art-line-progress">
@@ -147,7 +143,7 @@
         <div class="art-hard-skills-item">
           <div class="art-skill-heading">
             <!-- title -->
-            <h6>PHP</h6>
+            <h6>GraphQL</h6>
           </div>
           <!-- progressbar frame -->
           <div class="art-line-progress">
@@ -162,7 +158,7 @@
         <div class="art-hard-skills-item">
           <div class="art-skill-heading">
             <!-- title -->
-            <h6>Rust</h6>
+            <h6>Python / Django</h6>
           </div>
           <!-- progressbar frame -->
           <div class="art-line-progress">
@@ -177,12 +173,57 @@
         <div class="art-hard-skills-item">
           <div class="art-skill-heading">
             <!-- title -->
-            <h6>SQL</h6>
+            <h6>CSS / SASS / Tailwind CSS</h6>
           </div>
           <!-- progressbar frame -->
           <div class="art-line-progress">
             <!-- progressbar -->
             <div id="lineprog6"></div>
+          </div>
+          <!-- progressbar frame end -->
+        </div>
+        <!-- skill end -->
+
+        <!-- skill -->
+        <div class="art-hard-skills-item">
+          <div class="art-skill-heading">
+            <!-- title -->
+            <h6>SQL / MongoDB</h6>
+          </div>
+          <!-- progressbar frame -->
+          <div class="art-line-progress">
+            <!-- progressbar -->
+            <div id="lineprog7"></div>
+          </div>
+          <!-- progressbar frame end -->
+        </div>
+        <!-- skill end -->
+
+        <!-- skill -->
+        <div class="art-hard-skills-item">
+          <div class="art-skill-heading">
+            <!-- title -->
+            <h6>Solidity / Rust / Web3.js</h6>
+          </div>
+          <!-- progressbar frame -->
+          <div class="art-line-progress">
+            <!-- progressbar -->
+            <div id="lineprog8"></div>
+          </div>
+          <!-- progressbar frame end -->
+        </div>
+        <!-- skill end -->
+
+        <!-- skill -->
+        <div class="art-hard-skills-item">
+          <div class="art-skill-heading">
+            <!-- title -->
+            <h6>GIT / Jira / Microsoft Teams</h6>
+          </div>
+          <!-- progressbar frame -->
+          <div class="art-line-progress">
+            <!-- progressbar -->
+            <div id="lineprog9"></div>
           </div>
           <!-- progressbar frame end -->
         </div>
@@ -197,13 +238,13 @@
       <!-- knowledge list -->
       <ul class="art-knowledge-list p-15-0">
         <!-- list item -->
-        <li>Bootstrap, Materialize</li>
+        <li>Communication</li>
         <!-- list item -->
-        <li>Stylus, Sass, Less</li>
+        <li>Team Management</li>
         <!-- list item -->
-        <li>Gulp, Webpack, Grunt</li>
+        <li>Time Management</li>
         <!-- list item -->
-        <li>GIT knowledge</li>
+        <li>Attention To Detail</li>
       </ul>
       <!-- knowledge list end -->
 
@@ -214,7 +255,7 @@
       <div class="art-links-frame p-15-15">
 
         <!-- download cv button -->
-        <a href="files/cv.txt" class="art-link" download>Download cv <i class="fas fa-download"></i></a>
+        <a href="<?php echo get_template_directory_uri()?>/assets/files/Resume Junki Nakagawa.pdf" class="art-link" download>Download cv <i class="fas fa-download"></i></a>
 
       </div>
       <!-- links frame end -->
@@ -225,15 +266,15 @@
     <!-- sidebar social -->
     <div class="art-ls-social">
       <!-- social link -->
-      <a href="#." target="_blank"><i class="far fa-circle"></i></a>
+      <a href="#." target="_blank"><i class="fab fa-telegram"></i></a>
       <!-- social link -->
-      <a href="#." target="_blank"><i class="far fa-circle"></i></a>
+      <a href="#." target="_blank"><i class="fab fa-discord"></i></a>
       <!-- social link -->
-      <a href="#." target="_blank"><i class="far fa-circle"></i></a>
+      <a href="https://github.com/junki105" target="_blank"><i class="fab fa-github"></i></a>
       <!-- social link -->
-      <a href="#." target="_blank"><i class="far fa-circle"></i></a>
+      <a href="mailto: junkinakagawatech@gmail.com" target="_blank"><i class="fa fa-inbox"></i></a>
       <!-- social link -->
-      <a href="#." target="_blank"><i class="far fa-circle"></i></a>
+      <a href="#." target="_blank"><i class="fab fa-brands fa-xing"></i></a>
     </div>
     <!-- sidebar social end -->
 

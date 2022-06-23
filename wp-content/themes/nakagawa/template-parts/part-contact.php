@@ -49,13 +49,13 @@
         <div class="art-table p-15-15">
           <ul>
             <li>
-              <h6>Email:</h6><span>junki.dev@gmail.com</span>
+              <h6>Email:</h6><span>junkinakagawatech@gmail.com</span>
             </li>
             <li>
-              <h6>Telegram:</h6><span>@junki</span>
+              <h6>Telegram:</h6><span>@nakagawatech</span>
             </li>
             <li>
-              <h6>Discord:</h6><span>nakagawa#6147</span>
+              <h6>Discord:</h6><span>Nakagawa#7808</span>
             </li>
           </ul>
         </div>

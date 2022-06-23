@@ -28,8 +28,18 @@
         <!-- menu item -->
         <li class="menu-item current-menu-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
         <!-- menu item -->
-        <li class="menu-item">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>blog">Blog</a>
+        <li class="menu-item menu-item-has-children">
+          <a href="#.">Blog</a>
+          <!-- sub menu -->
+          <ul class="sub-menu">
+            <?php
+              $categories = get_categories();
+              foreach($categories as $category) {
+                echo '<li class="menu-item"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+              }
+            ?>
+          </ul>
+          <!-- sub menu end -->
         </li>
         <!-- menu item -->
         <li class="menu-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>contact">Contact</a></li>

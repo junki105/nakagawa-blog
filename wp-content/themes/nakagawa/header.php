@@ -17,10 +17,14 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/css/plugins/swiper.min.css">
   <!-- fancybox css -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/css/plugins/fancybox.min.css">
+
+  <link rel="stylesheet" id="hcb-style-css" href="<?php echo home_url('/') ?>wp-content/plugins/highlighting-code-block/build/css/hcb_style.css" type="text/css" media="all">
+  <link rel="stylesheet" id="hcb-coloring-css" href="<?php echo home_url('/') ?>wp-content/plugins/highlighting-code-block/build/css/coloring_light.css" type="text/css" media="all">
+
   <!-- main css -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/css/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/style.css">
 
 
-  <title>Software Developer - Junki Nakagawa</title>
+  <title>Web Developer - Junki Nakagawa</title>
 </head>

@@ -38,6 +38,14 @@
   <!-- swup js -->
   <script src="<?php echo get_template_directory_uri()?>/assets/js/plugins/swup.min.js"></script>
 
+  <script type="text/javascript" src="<?php echo home_url( '/' ) ?>wp-content/plugins/highlighting-code-block/assets/js/prism.js" id="hcb-prism-js"></script>
+  <script type="text/javascript" id="hcb-script-js-extra">
+  /* <![CDATA[ */
+    var hcbVars = {"showCopy":"on"};
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="<?php echo home_url( '/' ) ?>wp-content/plugins/highlighting-code-block/build/js/hcb_script.js" id="hcb-script-js"></script>
+
   <!-- main js -->
   <script src="<?php echo get_template_directory_uri()?>/assets/js/main.js"></script>
 

@@ -172,7 +172,7 @@ $(function() {
     }
   });
 
-  bar.animate(.9);
+  bar.animate(1);
 
   var bar = new ProgressBar.Line(lineprog2, {
     strokeWidth: 1.72,
@@ -189,7 +189,7 @@ $(function() {
     }
   });
 
-  bar.animate(.8);
+  bar.animate(1);
 
   var bar = new ProgressBar.Line(lineprog3, {
     strokeWidth: 1.72,
@@ -206,7 +206,7 @@ $(function() {
     }
   });
 
-  bar.animate(.75);
+  bar.animate(1);
 
   var bar = new ProgressBar.Line(lineprog4, {
     strokeWidth: 1.72,
@@ -223,7 +223,7 @@ $(function() {
     }
   });
 
-  bar.animate(.7);
+  bar.animate(1);
 
   var bar = new ProgressBar.Line(lineprog5, {
     strokeWidth: 1.72,
@@ -240,7 +240,7 @@ $(function() {
     }
   });
 
-  bar.animate(.6);
+  bar.animate(1);
 
   var bar = new ProgressBar.Line(lineprog6, {
     strokeWidth: 1.72,
@@ -257,7 +257,55 @@ $(function() {
     }
   });
 
-  bar.animate(.85);
+  bar.animate(1);
+  var bar = new ProgressBar.Line(lineprog7, {
+    strokeWidth: 1.72,
+    easing: 'easeInOut',
+    duration: 1400,
+    delay: 3200,
+    trailWidth: 1.72,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    },
+    step: (state, bar) => {
+      bar.setText(Math.round(bar.value() * 100) + ' %');
+    }
+  });
+
+  bar.animate(1);
+  var bar = new ProgressBar.Line(lineprog8, {
+    strokeWidth: 1.72,
+    easing: 'easeInOut',
+    duration: 1400,
+    delay: 3200,
+    trailWidth: 1.72,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    },
+    step: (state, bar) => {
+      bar.setText(Math.round(bar.value() * 100) + ' %');
+    }
+  });
+
+  bar.animate(1);
+  var bar = new ProgressBar.Line(lineprog9, {
+    strokeWidth: 1.72,
+    easing: 'easeInOut',
+    duration: 1400,
+    delay: 3200,
+    trailWidth: 1.72,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    },
+    step: (state, bar) => {
+      bar.setText(Math.round(bar.value() * 100) + ' %');
+    }
+  });
+
+  bar.animate(1);
 
   // Contact form
   $('.art-input').keyup(function() {
